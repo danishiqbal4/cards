@@ -7,7 +7,7 @@ function App() {
     //const api = 'http://localhost:3001/api';
 
     React.useEffect(() => {
-        fetch('http://localhost:3001/api')
+        fetch('/api')
         .then(response => response.json())
         .then(data => {
             console.log('Success:', data);
@@ -18,14 +18,14 @@ function App() {
         });
     }, []);
 
-  return (
-    <div className="App">
-        <header className="App-header">
-            <img src={logo} className="App-logo" alt="logo" />
-            <p>{!data ? "Loading..." : data}</p>
-        </header>
-    </div>
-  );
+    return (
+        <div className="App">
+            <header className="App-header">
+                <img src={logo} className="App-logo" alt="logo" />
+                <p>{!data ? "Loading..." : data}</p>
+            </header>
+        </div>
+    );
 }
 
 export default App;
