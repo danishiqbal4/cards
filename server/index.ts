@@ -18,7 +18,7 @@ app.use(cors(corsOptions));
 app.use(express.static(path.resolve(__dirname, '../client/public')));
 
 app.get("/api", (req: any, res: any) => {
-    res.json({ message: "Hello from server!" });
+    res.json({ message: "Hello from server!!!" });
 });
 
 app.get('*', (req: any, res: any) => {
